@@ -92,6 +92,26 @@ public interface Confi {
     static String RetroSNKNeoGeoPocket = "ROMS/SNK - Neo Geo Pocket";
     static String RetroSNKNeoGeoPocketColor = "ROMS/SNK - Neo Geo Pocket Color";
     
+    //Configuracion de PSP
+    static String PSPISO= "ISO";                            //Juegos en ISO
+    static String PSPMusica = "MUSIC";                      //Musica
+    static String PSPImagene = "PICTURE";                   //Imagenes
+    static String PSPVideo = "VIDEO";                       //Video
+    
+    static String PSPUpdate = "PSP/GAME/UPDATE";            //Actualizaciones
+    static String PSPPartidasPS4 = "PSP/SAVEDATA";          //Partidas de PSP
+    static String PSPTemas = "PSP/THEME";                   //Temas
+    
+    static String PSPROMS = "PSP/roms";                     //Juegos Retro
+    static String RetroArcade = "PSP/roms/arcade";          //Juegos arcade
+    static String RetroGB = "PSP/roms/gb";                  //Juegos gb
+    static String RetroGBA = "PSP/roms/gba";                //Juegos gba
+    static String RetroMD = "PSP/roms/md";                  //Juegos 
+    static String RetroNES = "PSP/roms/nes";                  //Juegos 
+    static String RetroSMS = "PSP/roms/sms";                  //Juegos 
+    static String RetroSNES = "PSP/roms/snes";                  //Juegos 
+    
+    static String InfoImgPsp= ".//Hack/CarpetasUSBPSP.jpg";
     static String InfoImgPs3= ".//Hack/CarpetasUSBPS3.jpg";
     static String InfoImgPs4= ".//Hack/CarpetasUSBPS4.jpg";
         

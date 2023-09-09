@@ -30,6 +30,7 @@ public class FrHomePS3 extends javax.swing.JFrame {
         txtUSB.setText("");
         jButton1.setEnabled(false);
         jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
         jtaMensaje.setEditable(false);
     }
 
@@ -89,6 +90,23 @@ public class FrHomePS3 extends javax.swing.JFrame {
         mensaje=mensaje+"\n"+urlUSB+"\\USB de PS4.jpg";
         return mensaje;
     }
+    public String crearArchivosPSP(){
+        String mensaje ="";
+        mensaje="Carpetas Creadas:";
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,Confi.PSPISO);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,Confi.PSPMusica);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,Confi.PSPImagene);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,Confi.PSPVideo);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,Confi.PSPUpdate);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,Confi.PSPPartidasPS4);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,Confi.PSPTemas);
+                
+        mensaje=mensaje+"\n"+crearRetroArchPSP("");
+        d.CopiarArchivos(Confi.InfoImgPsp, urlUSB+"USB de PSP.jpg");
+        mensaje=mensaje+"\n"+urlUSB+"\\USB de PSP.jpg";
+        return mensaje;
+    }
+    
     public String crearRetroArch(String url2){
         String mensaje ="";
         mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroATARI2600);
@@ -124,6 +142,18 @@ public class FrHomePS3 extends javax.swing.JFrame {
         mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroSNKNeoGeoPocketColor);
         return mensaje;
     }
+    
+    public String crearRetroArchPSP(String url2){
+        String mensaje ="";
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroArcade);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroGB);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroGBA);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroMD);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroNES);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroSMS);
+        mensaje=mensaje+"\n"+d.crearDirec(urlUSB,url2+Confi.RetroSNES);
+        return mensaje;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -139,6 +169,7 @@ public class FrHomePS3 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtaMensaje = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         txtUSB = new javax.swing.JLabel();
         jcbUSB = new javax.swing.JComboBox<>();
         jButton5 = new javax.swing.JButton();
@@ -167,6 +198,13 @@ public class FrHomePS3 extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setText("Carpetas Para PSP");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -177,7 +215,8 @@ public class FrHomePS3 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -190,6 +229,8 @@ public class FrHomePS3 extends javax.swing.JFrame {
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
         );
@@ -254,12 +295,18 @@ public class FrHomePS3 extends javax.swing.JFrame {
         txtUSB.setText(usbselect);
         jButton1.setEnabled(true);
         jButton2.setEnabled(true);
+        jButton3.setEnabled(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jtaMensaje.setText(crearArchivosPS4());
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        jtaMensaje.setText(crearArchivosPSP());
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -299,6 +346,7 @@ public class FrHomePS3 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
