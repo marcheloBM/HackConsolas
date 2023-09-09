@@ -14,9 +14,9 @@ public interface Confi {
     //Configuraciones para Update
     static String nameArchivo = "HackConsolas.zip";
     static String CarpetaUpdate = "Update/";
-    static String Version = "1.2";
-    static String UrlVersion = "https://raw.githubusercontent.com/marchelo1989/HackConsolas/main/Archivos/Version.txt";
-    static String UrlDescarga = "https://raw.githubusercontent.com/marchelo1989/HackConsolas/main/Archivos/Descarga.txt";
+    static String Version = "1.7";
+    static String UrlVersion = "https://raw.githubusercontent.com/marcheloBM/HackConsolas/main/Archivos/Version.txt";
+    static String UrlDescarga = "https://raw.githubusercontent.com/marcheloBM/HackConsolas/main/Archivos/Descarga.txt";
     
     //Configuracion de Directorio del Sistema
     static String SO = System.getProperty("os.name");
