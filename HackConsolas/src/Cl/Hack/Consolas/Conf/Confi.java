@@ -12,11 +12,10 @@ package Cl.Hack.Consolas.Conf;
  */
 public interface Confi {
     //Configuraciones para Update
-    static String nameArchivo = "HackConsolas.zip";
-    static String CarpetaUpdate = "Update/";
-    static String Version = "1.7";
-    static String UrlVersion = "https://raw.githubusercontent.com/marcheloBM/HackConsolas/main/Archivos/Version.txt";
-    static String UrlDescarga = "https://raw.githubusercontent.com/marcheloBM/HackConsolas/main/Archivos/Descarga.txt";
+    //Configuracion Nuevo Update
+    static String repositorio = "https://github.com/marcheloBM/HackConsolas";
+    static String versionActual = "1.9";
+    
     
     //Configuracion de Directorio del Sistema
     static String SO = System.getProperty("os.name");
